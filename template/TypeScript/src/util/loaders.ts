@@ -18,10 +18,7 @@ export type StructurePredicate<T> = (structure: unknown) => structure is T;
  * @param predicate - The predicate to check if the structure is valid
  * @returns
  */
-export async function loadStructures<T>(
-	dir: PathLike,
-	predicate: StructurePredicate<T>,
-    ): Promise<T[]> {
+export async function loadStructures<T>(dir: PathLike, predicate: StructurePredicate<T>): Promise<T[]> {
 	const statDir = await stat(dir);
 
 	if (!statDir.isDirectory()) {

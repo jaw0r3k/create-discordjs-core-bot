@@ -5,7 +5,7 @@ import { GatewayDispatchEvents, InteractionType } from '@discordjs/core';
  * @param {import('../events/index.js').Event[]} events
  * @param {import('@discordjs/core').Client} client
  */
- export function registerHandlers(commands, events, client) {
+export function registerHandlers(commands, events, client) {
 	// Create an event to handle command interactions
 	/** @type {import('../events/index.js').Event<GatewayDispatchEvents.IntegrationCreate>} */
 	const interactionCreateEvent = {

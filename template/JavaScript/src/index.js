@@ -7,13 +7,13 @@ import { loadCommands, loadEvents } from './util/loaders.js';
 import { registerHandlers } from './util/registerHandlers.js';
 
 // Create REST and WebSocket managers directly
-const rest = new REST({ version: "10" }).setToken(process.env.DISCORD_TOKEN);
+const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
 
 const gateway = new WebSocketManager({
-  // You can easly change intents, depending on what events are you currently using
-  intents: GatewayIntentBits.Guilds,
-  token: process.env.DISCORD_TOKEN,
-  rest,
+	// You can easly change intents, depending on what events are you currently using
+	intents: GatewayIntentBits.Guilds,
+	token: process.env.DISCORD_TOKEN,
+	rest,
 });
 
 // Create a client to emit relevant events.

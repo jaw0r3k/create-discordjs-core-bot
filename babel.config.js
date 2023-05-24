@@ -1,7 +1,7 @@
 /**
  * @type {import('@babel/core').TransformOptions}
  */
- module.exports = {
+module.exports = {
 	parserOpts: { strictMode: true },
 	sourceMaps: 'inline',
 	presets: [

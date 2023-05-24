@@ -30,11 +30,7 @@ export function resolvePackageManager(): PackageManager {
 		return 'pnpm';
 	}
 
-	console.error(
-		chalk.yellow(
-			`Detected an unsupported package manager (${npmConfigUserAgent}). Falling back to npm.`,
-		),
-	);
+	console.error(chalk.yellow(`Detected an unsupported package manager (${npmConfigUserAgent}). Falling back to npm.`));
 
 	// Fallback to the default package manager.
 	return 'npm';

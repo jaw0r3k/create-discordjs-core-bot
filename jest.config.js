@@ -1,7 +1,7 @@
 /**
  * @type {import('@jest/types').Config.InitialOptions}
  */
- module.exports = {
+module.exports = {
 	testMatch: ['**/+(*.)+(spec|test).+(ts|js)?(x)'],
 	testEnvironment: 'node',
 	collectCoverage: true,

@@ -61,10 +61,7 @@ export async function loadStructures(dir, predicate) {
  * @returns {Promise<Map<string,import('../commands/index.js').Command>>}
  */
 export async function loadCommands(dir) {
-	return (await loadStructures(dir, commandPredicate)).reduce(
-		(acc, cur) => acc.set(cur.data.name, cur),
-		new Map(),
-	);
+	return (await loadStructures(dir, commandPredicate)).reduce((acc, cur) => acc.set(cur.data.name, cur), new Map());
 }
 
 /**

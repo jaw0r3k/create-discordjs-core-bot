@@ -1,69 +1,68 @@
 {
-  "name": "create-discordjs-core-bot",
-  "version": "0.0.1",
-  "description": "A shortscrut to create beautyful bots with @discordjs/core",
-  "bin": "./dist/index.mjs",
-  "directories": {
+	"name": "create-discordjs-core-bot",
+	"version": "0.0.1",
+	"description": "A shortscrut to create beautyful bots with @discordjs/core",
+	"bin": "./dist/index.mjs",
+	"directories": {
 		"lib": "src"
 	},
 	"files": [
 		"dist",
 		"template"
 	],
-  "scripts": {
-	"build": "tsup",
-	"lint": "prettier --check . && cross-env TIMING=1 eslint src --ext .mjs,.js,.ts --format=pretty",
-	"format": "prettier --write . && cross-env TIMING=1 eslint src --ext .mjs,.js,.ts --fix --format=pretty",
-	"prepack": "npm run build && npm run lint",
-	"release": "cliff-jumper"
-  },
-  "keywords": [
-	"bot",
-	"core",
-	"template"
-  ],
-  "author": "Jaw0r3k",
-  "license": "Apache-2.0",
-  "repository": {
-	"type": "git",
-	"url": "git+https://github.com/jaw0r3k/create-discordjs-core-bot.git"
-  },
-  "devDependencies": {
-	"@babel/core": "^7.16.5",
-	"@babel/preset-env": "^7.16.5",
-	"@babel/preset-typescript": "^7.16.5",
-	"@commitlint/cli": "^15.0.0",
-	"@commitlint/config-angular": "^15.0.0",
-	"@discordjs/ts-docgen": "^0.3.4",
-	"@types/jest": "^27.0.3",
-	"@types/node": "^16.11.6",
-	"@types/prompts": "^2.4.4",
-	"@types/validate-npm-package-name": "^4.0.0",
-	"@typescript-eslint/eslint-plugin": "^5.8.0",
-	"@typescript-eslint/parser": "^5.8.0",
-	"eslint": "^8.5.0",
-	"eslint-config-marine": "^9.1.0",
-	"eslint-config-prettier": "^8.3.0",
-	"eslint-plugin-prettier": "^4.0.0",
-	"husky": "^7.0.4",
-	"is-ci": "^3.0.1",
-	"jest": "^27.4.5",
-	"lint-staged": "^12.1.4",
-	"prettier": "^2.5.1",
-	"standard-version": "^9.3.2",
-	"tsup": "^5.11.8",
-	"typescript": "^4.5.4"
-  },
-  "engines": {
-	"node": ">=18.16.0"
-  },
-  "publishConfig": {
-	"access": "public"
-  },
-  "dependencies": {
-	"chalk": "^5.2.0",
-	"commander": "^10.0.1",
-	"prompts": "^2.4.2",
-	"validate-npm-package-name": "^5.0.0"
-  }
+	"scripts": {
+		"build": "tsup",
+		"lint": "prettier --check . && cross-env TIMING=1 eslint src --ext .mjs,.js,.ts --format=pretty",
+		"format": "prettier --write . && cross-env TIMING=1 eslint src --ext .mjs,.js,.ts --fix --format=pretty",
+		"prepack": "npm run build && npm run lint"
+	},
+	"keywords": [
+		"bot",
+		"core",
+		"template"
+	],
+	"author": "Jaw0r3k",
+	"license": "Apache-2.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jaw0r3k/create-discordjs-core-bot.git"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.16.5",
+		"@babel/preset-env": "^7.16.5",
+		"@babel/preset-typescript": "^7.16.5",
+		"@commitlint/cli": "^15.0.0",
+		"@commitlint/config-angular": "^15.0.0",
+		"@discordjs/ts-docgen": "^0.3.4",
+		"@types/jest": "^27.0.3",
+		"@types/node": "^16.11.6",
+		"@types/prompts": "^2.4.4",
+		"@types/validate-npm-package-name": "^4.0.0",
+		"@typescript-eslint/eslint-plugin": "^5.8.0",
+		"@typescript-eslint/parser": "^5.8.0",
+		"eslint": "^8.5.0",
+		"eslint-config-marine": "^9.1.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"husky": "^7.0.4",
+		"is-ci": "^3.0.1",
+		"jest": "^27.4.5",
+		"lint-staged": "^12.1.4",
+		"prettier": "^2.5.1",
+		"standard-version": "^9.3.2",
+		"tsup": "^5.11.8",
+		"typescript": "^4.5.4"
+	},
+	"engines": {
+		"node": ">=18.16.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"dependencies": {
+		"chalk": "^5.2.0",
+		"commander": "^10.0.1",
+		"prompts": "^2.4.2",
+		"validate-npm-package-name": "^5.0.0"
+	}
 }
