@@ -1,7 +1,7 @@
 {
 	"name": "create-discordjs-core-bot",
-	"version": "0.0.1",
-	"description": "A shortscrut to create beautyful bots with @discordjs/core",
+	"version": "0.0.3",
+	"description": "A helper to simply create beautiful bots with @discordjs/core",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
 	"bin": "./dist/index.mjs",
@@ -28,9 +28,13 @@
 		"prepare": "is-ci || husky install"
 	},
 	"keywords": [
+		"discordjs",
 		"bot",
 		"core",
-		"template"
+		"template",
+		"create-bot",
+		"init-bot",
+		"discord-api"
 	],
 	"author": "Jaw0r3k",
 	"license": "Apache-2.0",
@@ -57,7 +61,6 @@
 		"eslint-plugin-prettier": "^4.0.0",
 		"husky": "^7.0.4",
 		"is-ci": "^3.0.1",
-		"jest": "^27.4.5",
 		"lint-staged": "^12.1.4",
 		"prettier": "^2.5.1",
 		"standard-version": "^9.3.2",
