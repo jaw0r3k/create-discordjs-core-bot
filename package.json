@@ -2,19 +2,30 @@
 	"name": "create-discordjs-core-bot",
 	"version": "0.0.1",
 	"description": "A shortscrut to create beautyful bots with @discordjs/core",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
 	"bin": "./dist/index.mjs",
+	"typings": "./dist/index.d.ts",
+	"exports": {
+		"import": "./dist/index.mjs",
+		"require": "./dist/index.js"
+	},
 	"directories": {
-		"lib": "src"
+		"lib": "src",
+		"example": "template"
 	},
 	"files": [
 		"dist",
 		"template"
 	],
 	"scripts": {
+		"pretest": "npm run build",
 		"build": "tsup",
-		"lint": "prettier --check . && cross-env TIMING=1 eslint src --ext .mjs,.js,.ts --format=pretty",
-		"format": "prettier --write . && cross-env TIMING=1 eslint src --ext .mjs,.js,.ts --fix --format=pretty",
-		"prepack": "npm run build && npm run lint"
+		"lint": "eslint src --ext mjs,js,ts",
+		"lint:fix": "eslint src --ext mjs,js,ts --fix",
+		"format": "prettier --write **/*.{ts,js,json,yml,yaml}",
+		"prepack": "npm run build && npm run lint",
+		"prepare": "is-ci || husky install"
 	},
 	"keywords": [
 		"bot",
@@ -33,16 +44,16 @@
 		"@babel/preset-typescript": "^7.16.5",
 		"@commitlint/cli": "^15.0.0",
 		"@commitlint/config-angular": "^15.0.0",
-		"@discordjs/ts-docgen": "^0.3.4",
 		"@types/jest": "^27.0.3",
 		"@types/node": "^16.11.6",
 		"@types/prompts": "^2.4.4",
 		"@types/validate-npm-package-name": "^4.0.0",
-		"@typescript-eslint/eslint-plugin": "^5.8.0",
-		"@typescript-eslint/parser": "^5.8.0",
+		"@typescript-eslint/eslint-plugin": "^5.59.7",
+		"@typescript-eslint/parser": "^5.59.7",
 		"eslint": "^8.5.0",
 		"eslint-config-marine": "^9.1.0",
 		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.27.5",
 		"eslint-plugin-prettier": "^4.0.0",
 		"husky": "^7.0.4",
 		"is-ci": "^3.0.1",

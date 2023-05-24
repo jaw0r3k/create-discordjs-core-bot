@@ -1,15 +1,14 @@
 #!/usr/bin/env node
 
-// eslint-disable-next-line n/shebang
 import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
 import { URL } from 'node:url';
 import chalk from 'chalk';
 import { program } from 'commander';
+import prompts from 'prompts';
 import validateProjectName from 'validate-npm-package-name';
 import { install, resolvePackageManager } from './helpers/packageManager.js';
-import prompts from 'prompts';
 (async () => {
 	program
 		.description('Create a basic @discordjs/core bot.')
