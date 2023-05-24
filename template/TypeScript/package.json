@@ -1,0 +1,28 @@
+{
+	"name": "[REPLACE-NAME]",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"test": "tsc",
+		"lint": "prettier --check . && eslint ./src --ext .ts --format=pretty",
+		"format": "prettier --write . && eslint ./src --ext .ts --fix --format=pretty",
+		"deploy": "node --require dotenv/config dist/deploy.js",
+		"start": "node --require dotenv/config dist/index.js"
+	},
+	"dependencies": {
+		"@discordjs/core": "^0.6.0",
+		"@discordjs/rest": "^1.7.1",
+		"@discordjs/ws": "^0.8.3",
+		"dotenv": "^16.0.3"
+	},
+	"devDependencies": {
+		"@sapphire/ts-config": "^4.0.0",
+		"@types/node": "^18.15.3",
+		"eslint": "^8.40.0",
+		"eslint-config-neon": "^0.1.47",
+		"eslint-formatter-pretty": "^5.0.0",
+		"prettier": "^2.8.8",
+		"typescript": "^5.0.4"
+	}
+}
