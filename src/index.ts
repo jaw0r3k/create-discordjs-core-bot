@@ -13,11 +13,12 @@ import { install, resolvePackageManager } from './helpers/packageManager.js';
 	program
 		.description('Create a basic @discordjs/core bot.')
 		.option('--typescript', 'Whether to use the TypeScript template.')
+		.option('--no-install', 'Whether to not automatically install the packages.')
 		.argument('<directory>', 'The directory where this will be created.')
 		.parse();
 
-	let { typescript } = program.opts();
-	const [directory] = program.args;
+		let { typescript, 'no-install': noInstall } = program.opts();
+		const [directory] = program.args;
 
 	if (!directory) {
 		console.error(chalk.red('Please specify the project directory.'));
@@ -87,7 +88,12 @@ import { install, resolvePackageManager } from './helpers/packageManager.js';
 	const newPackageJSON = readFileSync('./package.json', { encoding: 'utf8' }).replace('[REPLACE-NAME]', directoryName);
 	writeFileSync('./package.json', newPackageJSON);
 
-	const packageManager = resolvePackageManager();
-	install(packageManager);
+	if (noInstall) {
+		console.log(chalk.yellow('Remember to install the dependencies!'));
+	} else {
+		const packageManager = resolvePackageManager();
+		install(packageManager);
+	}
+
 	console.log(chalk.green('All done succesfully!'));
 })();

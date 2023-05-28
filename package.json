@@ -25,7 +25,8 @@
 		"lint:fix": "eslint src --ext mjs,js,ts --fix",
 		"format": "prettier --write **/*.{ts,js,json,yml,yaml}",
 		"prepack": "npm run build && npm run lint",
-		"prepare": "is-ci || husky install"
+		"prepare": "is-ci || husky install",
+		"release": "standard-version --preset angular"
 	},
 	"keywords": [
 		"discordjs",
