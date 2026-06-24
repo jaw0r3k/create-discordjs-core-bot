@@ -44,9 +44,9 @@
 		"url": "git+https://github.com/jaw0r3k/create-discordjs-core-bot.git"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.16.5",
-		"@babel/preset-env": "^7.16.5",
-		"@babel/preset-typescript": "^7.16.5",
+		"@babel/core": "^8.0.1",
+		"@babel/preset-env": "^8.0.2",
+		"@babel/preset-typescript": "^8.0.1",
 		"@commitlint/cli": "^20.1.0",
 		"@commitlint/config-angular": "^15.0.0",
 		"@types/jest": "^27.0.3",
